@@ -2,12 +2,14 @@ import { ThemeProvider } from '@mui/material/styles';
 import theme from './theme';
 
 import './App.css'
-import { Hello } from './components/hello';
+import { CssBaseline } from '@mui/material';
+import AppBarComponent from './components/AppBar';
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Hello />
+      <CssBaseline />
+      <AppBarComponent />
     </ThemeProvider>
   )
 }
