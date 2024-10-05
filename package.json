@@ -12,8 +12,14 @@
   "dependencies": {
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
+    "@mui/icons-material": "^6.1.2",
     "@mui/material": "^6.1.2",
     "@mui/styles": "^6.1.2",
+    "husky": "^9.1.6",
+    "import-sort-cli": "^6.0.0",
+    "import-sort-style-renke": "^6.0.0",
+    "lint-staged": "^15.2.10",
+    "prettier": "^3.3.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.26.2"
@@ -30,5 +36,26 @@
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.7.0",
     "vite": "^5.4.8"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+        "import-sort-cli --write", 
+        "prettier --write"
+    ],
+    "*.{json,md}": ["prettier --write"],
+    "*.hbs": ["prettier --write"]
+  },
+  "prettier": {
+    "trailingComma": "all"
+  },
+  "importSort": {
+    ".ts, .tsx": {
+      "style": "renke"
+    }
   }
 }
