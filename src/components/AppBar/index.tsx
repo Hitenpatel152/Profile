@@ -54,6 +54,7 @@ const AppBarComponent: React.FC = () => {
             color="inherit"
             aria-label="menu"
             onClick={toggleDrawer(true)}
+            className={classes.menuButton}
             sx={{ mr: 2, display: { xs: 'block', md: 'none' } }} // Hide on larger screens
           >
             <MenuIcon />

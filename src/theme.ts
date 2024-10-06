@@ -10,6 +10,9 @@ const themeOptions: ThemeOptions = {
     secondary: {
       main: '#d26c19',
     },
+    grey: {
+      100: '#575757'
+    }
   },
 };
 
